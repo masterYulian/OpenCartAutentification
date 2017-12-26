@@ -1,0 +1,3 @@
+login_spec_data:
+  valid_login_test_description: 'should enter valid registered user account data - login must be successful'
+  invalid_login_test_description: 'should enter invalid user account data - login must be unsuccessful and alert danger message must be appear'

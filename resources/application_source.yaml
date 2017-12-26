@@ -1,0 +1,29 @@
+firefox:
+  user_logout_url: "http://oppencart.herokuapp.com/index.php?route=account/logout"
+  user_register_url: "http://server7.pp.ua/index.php?route=account/register"
+  user_login_url: "http://server7.pp.ua/index.php?route=account/login"
+  user_account_url: "http://openncart.herokuapp.com/index.php?route=account/account"
+  base_url: "http://oppencart.herokuapp.com/"
+  admin_login_url: "http://oppencart.herokuapp.com/admin/"
+  admin_logout_url: "http://oppencart.herokuapp.com/admin/index.php?route=common/logout"
+  browser_name: 'firefox'
+  driver_path: "lib/geckodriver"
+  implicit_wait_timeout: 5
+  page_load_timeout: 5
+  script_timeout: 5
+  explicit_wait_timeout: 2
+
+chrome:
+  user_logout_url: "http://oppencart.herokuapp.com/index.php?route=account/logout"
+  user_register_url: "http://server7.pp.ua/index.php?route=account/register"
+  user_login_url: "http://server7.pp.ua/index.php?route=account/login"
+  user_account_url: "http://oppencart.herokuapp.com/index.php?route=account/account"
+  base_url: "http://oppencart.herokuapp.com/"
+  admin_login_url: "http://oppencart.herokuapp.com/admin/"
+  admin_logout_url: "http://oppencart.herokuapp.com/admin/index.php?route=common/logout"
+  browser_name: 'chrome'
+  driver_path: "lib/chromedriver"
+  implicit_wait_timeout: 5
+  page_load_timeout: 5
+  script_timeout: 5
+  explicit_wait_timeout: 2

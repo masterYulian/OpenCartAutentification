@@ -1,0 +1,6 @@
+register_fields_spec_data:
+  valid_email_test_description: 'should enter valid e-mail field value by common e-mail template - value is accepted'
+  blank_email_test_description: 'should enter blank e-mail field value - error notification is appeared'
+  cyrillic_email_test_description: 'should enter cyrillic e-mail field value - error notification is appeared'
+  at_symbol_miss_email_test_description: "should enter e-mail field value without '@' symbol - error notification is appeared"
+  registered_email_test_description: 'should enter previously registered user account email - alert notification must be appear'

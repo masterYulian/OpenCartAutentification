@@ -1,0 +1,11 @@
+.idea/
+.ruby-gemset
+.ruby-version
+#log/
+allure-report/
+reports/allure/gen/
+run_tests
+rspec-report/
+#fail_screenshots
+reports/
+

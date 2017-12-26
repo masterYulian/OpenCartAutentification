@@ -1,0 +1,164 @@
+valid_user_credentials:
+  first_name: 'Yulian'
+  last_name: 'Mylian'
+  email: 'b10zddzvc98xzx12@gmail.com'
+  telephone: '+38 (063) 874 45 52'
+  company: 'SoftServe'
+  address_one: 'street Shevchenko 352/32'
+  address_too: 'no second address'
+  city: 'Lviv'
+  postcode: '79069'
+  country_id: '220'
+  zone_id: '3493'
+  fax: '+44 161 999 8888'
+  password: 'tuserfirst12345'
+  confirm_password: 'tuserfirst12345'
+  subscribe: true
+  policy: true
+
+valid_user_with_not_required_fields_empty:
+  first_name: 'Yulian'
+  last_name: 'Mylian'
+  email: '0dd98xzzp11@gmail.com'
+  telephone: '+38 (063) 874 45 52'
+  company: ''
+  address_one: 'street Shevchenko 352/32'
+  address_too: ''
+  city: 'Lviv'
+  postcode: '79069'
+  country_id: '220'
+  zone_id: '3493'
+  fax: ''
+  password: 'tuserfirst12345'
+  confirm_password: 'tuserfirst12345'
+  subscribe: true
+  policy: true
+
+valid_user_without_policy:
+  first_name: 'Yulian'
+  last_name: 'Mylian'
+  email: '00zz1212zx000021012@gmail.com'
+  telephone: '+38 (063) 874 45 52'
+  company: 'SoftServe'
+  address_one: 'street Shevchenko 352/32'
+  address_too: 'no second address'
+  city: 'Lviv'
+  postcode: '79069'
+  country_id: '220'
+  zone_id: '3493'
+  fax: '+44 161 999 8888'
+  password: 'tuserfirst12345'
+  confirm_password: 'tuserfirst12345'
+  subscribe: true
+  policy: false
+
+invalid_user_email_credentials:
+  first_name: 'Yulian'
+  last_name: 'Mylian'
+  email: 'tuserfirst@gmail.com'
+  telephone: 'no phone number'
+  company: 'no company'
+  address_one: 'undefinded'
+  address_too: 'no second address'
+  city: 'no city data'
+  postcode: 'no postcode'
+  country_id: '220'
+  zone_id: '3493'
+  password: 'qazwsxedc'
+  confirm_password: 'qazwsxedc'
+  subscribe: true
+  policy: true
+
+invalid_user_required_fields_empty:
+  first_name: ''
+  last_name: ''
+  email: ''
+  telephone: ''
+  company: 'company'
+  address_one: ''
+  address_too: 'no second address'
+  city: ''
+  postcode: ''
+  country_id: '220'
+  zone_id: '3493'
+  password: ''
+  confirm_password: ''
+  subscribe: false
+  policy: true
+
+valid_email_data:
+  first_name: ''
+  last_name: ''
+  email: 'tuserfirst@gmail.com'
+  telephone: ''
+  company: ''
+  address_one: ''
+  address_too: ''
+  city: ''
+  postcode: ''
+  country_id: '220'
+  zone_id: '3493'
+  password: ''
+  confirm_password: ''
+  subscribe: true
+  policy: true
+
+cyrillic_email_data:
+  first_name: ''
+  last_name: ''
+  email: 'тест@gmail.com'
+  telephone: ''
+  company: ''
+  address_one: ''
+  address_too: ''
+  city: ''
+  postcode: ''
+  country_id: '220'
+  zone_id: '3493'
+  password: ''
+  confirm_password: ''
+  subscribe: true
+  policy: true
+
+blank_email_data:
+  first_name: ''
+  last_name: ''
+  email: ''
+  telephone: ''
+  company: ''
+  address_one: ''
+  address_too: ''
+  city: ''
+  postcode: ''
+  country_id: '220'
+  zone_id: '3493'
+  password: ''
+  confirm_password: ''
+  subscribe: true
+  policy: true
+
+at_symbol_miss_email_data:
+  first_name: ''
+  last_name: ''
+  email: 'tuserfirstgmail.com'
+  telephone: ''
+  company: ''
+  address_one: ''
+  address_too: ''
+  city: ''
+  postcode: ''
+  country_id: '220'
+  zone_id: '3493'
+  password: ''
+  confirm_password: ''
+  subscribe: true
+  policy: true
+
+valid_user_login_data:
+  email: 'b10zddzvc98xzx12@gmail.com'
+  password: 'qwerty'
+
+invalid_user_login_data:
+  email: 'tuserfirst12345'
+  password: 'qwerty'
+
