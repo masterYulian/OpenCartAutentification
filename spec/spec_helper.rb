@@ -8,6 +8,7 @@ require_relative '../data/tests_descriptions/login_tests_descriptions_repository
 require_relative '../data/tests_descriptions/register_fields_tests_descriptions_repository'
 require_relative '../data/users/user_repository'
 require_relative '../pages/application'
+require_relative '../tools/search/search'
 require_relative '../tools/logger_wrapper'
 require 'selenium-webdriver'
 
@@ -54,9 +55,9 @@ RSpec.configure do |_config|
   $log = LoggerWrapper.logger
 
   _config.after(:all) do
-    $log.fatal 'before after all del cookies'
+    LoggerWrapper.logger.fatal 'before after all del cookies'
     Application.remove
-    $log.fatal ' after after all del cookies'
+    LoggerWrapper.logger.fatal 'after after all del cookies'
   end
 
   AllureRSpec.configure do |config|

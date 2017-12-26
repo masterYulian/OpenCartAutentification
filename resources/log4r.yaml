@@ -16,7 +16,7 @@ log4r_config:
       level    : ALL
       formatter:
         date_pattern: #'%y%m%d %H:%M:%S'
-        pattern     : '[%l %d]: %M'
+        pattern     : '[%l %d] %t: %M'
         type        : PatternFormatter
 
     - type        : RollingFileOutputter
@@ -28,6 +28,6 @@ log4r_config:
       max_backups : '5'
       formatter   :
         date_pattern: #'%y%m%d %H:%M:%S'
-        pattern     : '[%l %d]: %M'
+        pattern     : '[%l %d] %t: %M'
         type        : PatternFormatter
 ---
