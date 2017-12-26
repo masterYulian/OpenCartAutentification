@@ -39,10 +39,10 @@ class Search
   def wait_for_web_element(web_element_locator)
     wait_for(web_element_locator)
   rescue Selenium::WebDriver::Error::TimeOutError
-    LoggerWrapper.logger.info "Web element '#{web_element_locator.values}' was not found"
+    LoggerWrapper.logger.warn "Web element '#{web_element_locator.values}' was not found"
     nil
   rescue Selenium::WebDriver::Error::NoSuchElementError
-    LoggerWrapper.logger.info "Web element '#{web_element_locator.values}' was not found"
+    LoggerWrapper.logger.warn "Web element '#{web_element_locator.values}' was not found"
     nil
   end
 

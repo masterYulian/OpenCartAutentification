@@ -57,9 +57,8 @@ describe 'Registration page' do
     it 'should enter one (or) more of required fields is not valid - registration
         must be unsuccessful and error notification(s) must appear', severity: :critical do |_e|
       $log.info _e.description
-      Application.remove
-      Application.get(ApplicationSourceRepository.chrome_heroku, true)
-      $log.info e.current
+      # Application.remove
+      # Application.get(ApplicationSourceRepository.chrome_heroku, true)
       expect(Application.get.user_register_business_page
                  .invalid_data_register($user_required_field_empty)
                  .error_notifications.empty?).to be false
