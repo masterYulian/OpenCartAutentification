@@ -8,9 +8,9 @@ describe 'Registration page' do
   end
 
   after(:each) do |_config|
-    $log.fatal 'bef del cookies'
+    $log.fatal 'bef each del cookies'
     Application.get.browser.delete_all_cookies
-    $log.fatal 'after def cookies'
+    $log.fatal 'bef after each del cookies'
     unless _config.exception.nil?
       _config.attach_file("#{Time.now.strftime("#{Application.get.browser.current_title} %d-%m-%Y %H:%M:%S")}.png",
                           Application.get.browser.save_screenshot('fail_screenshots/registration_page/'))
