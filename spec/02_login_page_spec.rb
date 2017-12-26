@@ -2,7 +2,7 @@
 
 describe 'Login page' do
   before(:all) do
-    Application.get(ApplicationSourceRepository.firefox_heroku)
+    Application.get(ApplicationSourceRepository.firefox_heroku, false)
     @login_business_page = Application.get.user_login_business_page
   end
 
@@ -14,11 +14,13 @@ describe 'Login page' do
   end
 
   it 'smoke test', severity: :critical do
+    $log.fatal 'smoke login'
     expect(@login_business_page.smoke?).to be true
   end
 
   $login_data_provider.each do |user, test_description, expected|
     it test_description, severity: :critical do
+      $log.fatal test_description
       expect(@login_business_page.login(user)
                  .alert_notification?).to be expected
     end
