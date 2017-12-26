@@ -2,7 +2,7 @@
 
 describe 'Login page' do
   before(:all) do
-    Application.get(ApplicationSourceRepository.firefox_heroku, false)
+    Application.get(ApplicationSourceRepository.firefox_heroku, true)
     @login_business_page = Application.get.user_login_business_page
   end
 

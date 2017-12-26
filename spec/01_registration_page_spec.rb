@@ -58,7 +58,7 @@ describe 'Registration page' do
         must be unsuccessful and error notification(s) must appear', severity: :critical do |_e|
       $log.info _e.description
       Application.remove
-      Application.get(ApplicationSourceRepository.chrome_heroku, false)
+      Application.get(ApplicationSourceRepository.chrome_heroku, true)
       $log.info e.current
       expect(Application.get.user_register_business_page
                  .invalid_data_register($user_required_field_empty)
