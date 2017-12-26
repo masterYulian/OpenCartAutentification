@@ -13,14 +13,15 @@ describe 'Login page' do
     end
   end
 
-  it 'smoke test', severity: :critical do
-    $log.fatal 'Login page smoke test'
+  it 'smoke test', severity: :critical do |_e|
+    $log.info 'Login page smoke test'
+    $log.info _e.description
     expect(@login_business_page.smoke?).to be true
   end
 
   $login_data_provider.each do |user, test_description, expected|
     it test_description, severity: :critical do
-      $log.fatal test_description
+      $log.info test_description
       expect(@login_business_page.login(user)
                  .alert_notification?).to be expected
     end

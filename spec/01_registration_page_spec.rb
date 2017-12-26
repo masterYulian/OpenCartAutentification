@@ -55,30 +55,35 @@ describe 'Registration page' do
 
   context 'states tests group' do
     it 'should enter one (or) more of required fields is not valid - registration
-        must be unsuccessful and error notification(s) must appear', severity: :critical do
+        must be unsuccessful and error notification(s) must appear', severity: :critical do |_e|
+      $log.info _e.description
       Application.remove
-      Application.get(ApplicationSourceRepository.chrome_heroku, true)
+      Application.get(ApplicationSourceRepository.chrome_heroku, false)
+      $log.info e.current
       expect(Application.get.user_register_business_page
                  .invalid_data_register($user_required_field_empty)
                  .error_notifications.empty?).to be false
     end
 
     it 'should set policy checkbox in unchecked state - registration must be unsuccessful
-        and error notification(s) must appear', severity: :critical do
+        and error notification(s) must appear', severity: :critical do |_e|
+      $log.info _e.description
       expect(Application.get.user_register_business_page
                  .alert_notification_identify($valid_user_without_policy)
                  .alert_notification?).to be true
     end
 
     it 'should enter all required fields is valid and not required fields is empty -
-        registration must be successful', severity: :critical do
+        registration must be successful', severity: :critical do |_e|
+      $log.info _e.description
       expect(Application.get.user_register_business_page
                  .register($valid_user_with_not_required_fields_empty)
                  .success_register_atomic_page?).to be true
     end
 
     it 'should enter all required fields are valid and
-        policy checkbox set in checked state - registration must be successful', severity: :critical do
+        policy checkbox set in checked state - registration must be successful', severity: :critical do |_e|
+      $log.info _e.description
       expect(Application.get.user_register_business_page.register($valid_user_data)
                  .success_register_atomic_page?).to be true
     end
