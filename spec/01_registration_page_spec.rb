@@ -78,6 +78,7 @@ describe 'Registration page' do
       expect(Application.get.user_register_business_page
                  .register($valid_user_with_not_required_fields_empty)
                  .success_register_atomic_page?).to be true
+      $log.info 'true'
     end
 
     it 'should enter all required fields are valid and
@@ -85,6 +86,7 @@ describe 'Registration page' do
       $log.info _e.description
       expect(Application.get.user_register_business_page.register($valid_user_data)
                  .success_register_atomic_page?).to be true
+      $log.info 'true'
     end
 
   end
