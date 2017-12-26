@@ -56,7 +56,7 @@ RSpec.configure do |_config|
 
   _config.after(:all) do
     LoggerWrapper.logger.fatal 'before after all del cookies'
-    Application.remove
+    #Application.remove
     LoggerWrapper.logger.fatal 'after after all del cookies'
   end
 
