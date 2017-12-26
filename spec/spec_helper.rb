@@ -54,11 +54,9 @@ RSpec.configure do |_config|
 
   $log = LoggerWrapper.logger
 
-  # _config.after(:all) do
-  #   LoggerWrapper.logger.fatal 'before after all del cookies'
-  #   Application.remove
-  #   LoggerWrapper.logger.fatal 'after after all del cookies'
-  # end
+  _config.after(:all) do
+    Application.remove
+  end
 
   AllureRSpec.configure do |config|
     config.output_dir = 'reports/allure/gen/allure-results'

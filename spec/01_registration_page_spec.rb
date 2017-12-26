@@ -8,9 +8,7 @@ describe 'Registration page' do
   end
 
   after(:each) do |_config|
-    $log.fatal 'bef each del cookies'
     Application.get.browser.delete_all_cookies
-    $log.fatal 'bef after each del cookies'
     unless _config.exception.nil?
       _config.attach_file("#{Time.now.strftime("#{Application.get.browser.current_title} %d-%m-%Y %H:%M:%S")}.png",
                           Application.get.browser.save_screenshot('fail_screenshots/registration_page/'))
@@ -56,13 +54,10 @@ describe 'Registration page' do
   end
 
   context 'states tests group' do
-
     it 'should enter one (or) more of required fields is not valid - registration
         must be unsuccessful and error notification(s) must appear', severity: :critical do
-      $log.fatal 'second remove'
       Application.remove
-      $log.fatal '1'
-      Application.get(ApplicationSourceRepository.chrome_heroku, false)
+      Application.get(ApplicationSourceRepository.chrome_heroku, true)
       expect(Application.get.user_register_business_page
                  .invalid_data_register($user_required_field_empty)
                  .error_notifications.empty?).to be false
@@ -70,7 +65,6 @@ describe 'Registration page' do
 
     it 'should set policy checkbox in unchecked state - registration must be unsuccessful
         and error notification(s) must appear', severity: :critical do
-      $log.fatal '2'
       expect(Application.get.user_register_business_page
                  .alert_notification_identify($valid_user_without_policy)
                  .alert_notification?).to be true
@@ -78,7 +72,6 @@ describe 'Registration page' do
 
     it 'should enter all required fields is valid and not required fields is empty -
         registration must be successful', severity: :critical do
-      $log.fatal '2'
       expect(Application.get.user_register_business_page
                  .register($valid_user_with_not_required_fields_empty)
                  .success_register_atomic_page?).to be true
@@ -86,7 +79,6 @@ describe 'Registration page' do
 
     it 'should enter all required fields are valid and
         policy checkbox set in checked state - registration must be successful', severity: :critical do
-      $log.fatal '2'
       expect(Application.get.user_register_business_page.register($valid_user_data)
                  .success_register_atomic_page?).to be true
     end

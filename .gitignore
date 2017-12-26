@@ -1,14 +1,9 @@
 .idea/
 .ruby-gemset
 .ruby-version
-#log/
-allure-report/
-#reports/allure/gen/
 run_tests
 rspec-report/
-#fail_screenshots
 #reports/
-
 /log/
 /fail_screenshots/login_page/
 /fail_screenshots/registration_page/
