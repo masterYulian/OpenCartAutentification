@@ -1,7 +1,7 @@
 valid_user_credentials:
   first_name: 'Yulian'
   last_name: 'Mylian'
-  email: 'b10zddzvc98xzx12@gmail.com'
+  email: 'b110zddzvc98xzx12@gmail.com'
   telephone: '+38 (063) 874 45 52'
   company: 'SoftServe'
   address_one: 'street Shevchenko 352/32'
@@ -19,7 +19,7 @@ valid_user_credentials:
 valid_user_with_not_required_fields_empty:
   first_name: 'Yulian'
   last_name: 'Mylian'
-  email: '0dd98xzzp11@gmail.com'
+  email: '0d2d98xzzp11@gmail.com'
   telephone: '+38 (063) 874 45 52'
   company: ''
   address_one: 'street Shevchenko 352/32'
@@ -37,7 +37,7 @@ valid_user_with_not_required_fields_empty:
 valid_user_without_policy:
   first_name: 'Yulian'
   last_name: 'Mylian'
-  email: '00zz1212zx000021012@gmail.com'
+  email: '00z3z1212zx000021012@gmail.com'
   telephone: '+38 (063) 874 45 52'
   company: 'SoftServe'
   address_one: 'street Shevchenko 352/32'
@@ -156,7 +156,7 @@ at_symbol_miss_email_data:
 
 valid_user_login_data:
   email: 'b10zddzvc98xzx12@gmail.com'
-  password: 'qwerty'
+  password: 'tuserfirst12345'
 
 invalid_user_login_data:
   email: 'tuserfirst12345'

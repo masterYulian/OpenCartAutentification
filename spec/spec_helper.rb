@@ -54,7 +54,9 @@ RSpec.configure do |_config|
   $log = LoggerWrapper.logger
 
   _config.after(:all) do
+    $log.fatal 'before after all del cookies'
     Application.remove
+    $log.fatal ' after after all del cookies'
   end
 
   AllureRSpec.configure do |config|
