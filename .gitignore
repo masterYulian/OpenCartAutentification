@@ -9,3 +9,6 @@ rspec-report/
 #fail_screenshots
 #reports/
 
+/log/
+/fail_screenshots/login_page/
+/fail_screenshots/registration_page/
