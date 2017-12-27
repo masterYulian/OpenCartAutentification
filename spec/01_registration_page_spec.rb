@@ -88,7 +88,6 @@ describe 'Registration page' do
                  .success_register_atomic_page?).to be true
     end
 
-
   end
 
 end
