@@ -19,12 +19,12 @@ describe 'Login page' do
     expect(@login_business_page.smoke?).to be true
   end
 
-  $login_data_provider.each do |user, test_description, expected|
-    it test_description, severity: :critical do
-      $log.info test_description
-      expect(@login_business_page.login(user)
-                 .alert_notification?).to be expected
-    end
-  end
+  # $login_data_provider.each do |user, test_description, expected|
+  #   it test_description, severity: :critical do
+  #     $log.info test_description
+  #     expect(@login_business_page.login(user)
+  #                .alert_notification?).to be expected
+  #   end
+  # end
 
 end

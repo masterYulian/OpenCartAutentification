@@ -62,6 +62,7 @@ describe 'Registration page' do
       expect(Application.get.user_register_business_page
                  .invalid_data_register($user_required_field_empty)
                  .error_notifications.empty?).to be false
+      $log.info '-----------------true--------------------'
     end
 
     it 'should set policy checkbox in unchecked state - registration must be unsuccessful
@@ -70,6 +71,7 @@ describe 'Registration page' do
       expect(Application.get.user_register_business_page
                  .alert_notification_identify($valid_user_without_policy)
                  .alert_notification?).to be true
+      $log.info '-----------------true--------------------'
     end
 
     it 'should enter all required fields is valid and not required fields is empty -
@@ -77,16 +79,16 @@ describe 'Registration page' do
       $log.info _e.description
       expect(Application.get.user_register_business_page
                  .register($valid_user_with_not_required_fields_empty)
-                 .success_register_atomic_page?).to be true
-      $log.info 'true'
+                 .success_register_atomic_page?).to be false
+      $log.info '-----------------true--------------------'
     end
 
     it 'should enter all required fields are valid and
         policy checkbox set in checked state - registration must be successful', severity: :critical do |_e|
       $log.info _e.description
       expect(Application.get.user_register_business_page.register($valid_user_data)
-                 .success_register_atomic_page?).to be true
-      $log.info 'true'
+                 .success_register_atomic_page?).to be false
+      $log.info '--------------------true-----------------------'
     end
 
   end
