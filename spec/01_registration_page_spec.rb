@@ -88,6 +88,11 @@ describe 'Registration page' do
                  .success_register_atomic_page?).to be true
     end
 
+    it 'testl', severity: :critical do |e|
+      $log.info e.description
+      expect(false).to be true
+    end
+
   end
 
 end
