@@ -16,7 +16,7 @@ class FirefoxDriver < Driver
                  else
                    Selenium::WebDriver.for :firefox, marionette: true
                  end
-    web_driver.manage.window.maximize if headless
+    web_driver.manage.window.maximize
     web_driver.manage.timeouts.implicit_wait = application_source.implicit_wait_timeout
     web_driver.manage.timeouts.page_load = application_source.page_load_timeout
     web_driver.manage.timeouts.script_timeout = application_source.script_timeout
