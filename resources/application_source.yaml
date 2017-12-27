@@ -8,10 +8,10 @@ firefox:
   admin_logout_url: "http://oppencart.herokuapp.com/admin/index.php?route=common/logout"
   browser_name: 'firefox'
   driver_path: "lib/geckodriver"
-  implicit_wait_timeout: 5
-  page_load_timeout: 5
-  script_timeout: 5
-  explicit_wait_timeout: 2
+  implicit_wait_timeout: 10
+  page_load_timeout: 10
+  script_timeout: 10
+  explicit_wait_timeout: 3
 
 chrome:
   user_logout_url: "http://oppencart.herokuapp.com/index.php?route=account/logout"
@@ -23,7 +23,7 @@ chrome:
   admin_logout_url: "http://oppencart.herokuapp.com/admin/index.php?route=common/logout"
   browser_name: 'chrome'
   driver_path: "lib/chromedriver"
-  implicit_wait_timeout: 5
-  page_load_timeout: 5
-  script_timeout: 5
-  explicit_wait_timeout: 2
+  implicit_wait_timeout: 10
+  page_load_timeout: 10
+  script_timeout: 10
+  explicit_wait_timeout: 3

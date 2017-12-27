@@ -19,39 +19,39 @@ describe 'Registration page' do
     expect(@register_business_page.smoke?).to be true
   end
 
-  context 'fields tests group' do
-    it  $registered_email_test_description do
-      $log.info $registered_email_test_description
-      expect(@register_business_page
-                 .alert_notification_identify($invalid_user_email_data)
-                 .alert_notification?).to be true
-    end
-
-    $valid_email_data_provider.each do |user, test_description, expected|
-      it test_description do
-        $log.info test_description
-        expect(@register_business_page.apply_fields_data(user)
-                   .template_email_error_notification?(user.email)).to be expected
-      end
-    end
-
-    $cyrillic_email_data_provider.each do |user, test_description, expected|
-      it test_description  do
-        $log.info test_description
-        expect(@register_business_page.register(user)
-                   .success_register_atomic_page?).to be expected
-      end
-    end
-
-    $register_email_data_provider.each do |user, test_description, expected|
-      it test_description  do
-        $log.info test_description
-        expect(@register_business_page.apply_fields_data(user)
-                   .email_error_notification?).to be expected
-      end
-    end
-
-  end
+  # context 'fields tests group' do
+  #   it  $registered_email_test_description do
+  #     $log.info $registered_email_test_description
+  #     expect(@register_business_page
+  #                .alert_notification_identify($invalid_user_email_data)
+  #                .alert_notification?).to be true
+  #   end
+  #
+  #   $valid_email_data_provider.each do |user, test_description, expected|
+  #     it test_description do
+  #       $log.info test_description
+  #       expect(@register_business_page.apply_fields_data(user)
+  #                  .template_email_error_notification?(user.email)).to be expected
+  #     end
+  #   end
+  #
+  #   $cyrillic_email_data_provider.each do |user, test_description, expected|
+  #     it test_description  do
+  #       $log.info test_description
+  #       expect(@register_business_page.register(user)
+  #                  .success_register_atomic_page?).to be expected
+  #     end
+  #   end
+  #
+  #   $register_email_data_provider.each do |user, test_description, expected|
+  #     it test_description  do
+  #       $log.info test_description
+  #       expect(@register_business_page.apply_fields_data(user)
+  #                  .email_error_notification?).to be expected
+  #     end
+  #   end
+  #
+  # end
 
   context 'states tests group' do
     it 'should enter one (or) more of required fields is not valid - registration
