@@ -1,7 +1,7 @@
 valid_user_credentials:
   first_name: 'Yulian'
   last_name: 'Mylian'
-  email: 'b110zddzvc98xzx12@gmail.com'
+  email: 'b110zddzzxccsdvc98xzx12@gmail.com'
   telephone: '+38 (063) 874 45 52'
   company: 'SoftServe'
   address_one: 'street Shevchenko 352/32'
@@ -19,7 +19,7 @@ valid_user_credentials:
 valid_user_with_not_required_fields_empty:
   first_name: 'Yulian'
   last_name: 'Mylian'
-  email: '0d2d98xzzp11@gmail.com'
+  email: '0d2d98asdxzzp11@gmail.com'
   telephone: '+38 (063) 874 45 52'
   company: ''
   address_one: 'street Shevchenko 352/32'

@@ -79,7 +79,7 @@ describe 'Registration page' do
       $log.info _e.description
       expect(Application.get.user_register_business_page
                  .register($valid_user_with_not_required_fields_empty)
-                 .success_register_atomic_page?).to be false
+                 .success_register_atomic_page?).to be true
       $log.info '-----------------true--------------------'
     end
 
@@ -87,7 +87,7 @@ describe 'Registration page' do
         policy checkbox set in checked state - registration must be successful', severity: :critical do |_e|
       $log.info _e.description
       expect(Application.get.user_register_business_page.register($valid_user_data)
-                 .success_register_atomic_page?).to be false
+                 .success_register_atomic_page?).to be true
       $log.info '--------------------true-----------------------'
     end
 
