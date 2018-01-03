@@ -3,7 +3,9 @@
 source 'https://rubygems.org'
 
 gem 'allure-rspec'
+gem 'figaro'
 gem 'log4r'
+gem 'mysql2'
 gem 'page-object'
 gem 'parallel_tests'
 gem 'pry'

@@ -38,7 +38,6 @@ class Application
 
   def self.remove
     unless @@instance.nil?
-      #@@instance.browser.delete_all_cookies
       @@instance.browser.quit
       @@instance = nil
     end
